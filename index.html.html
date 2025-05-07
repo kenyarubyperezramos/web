@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Marrana del Color</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --amarillo: #FFD700;
+      --rojo: #FF2D2D;
+      --azul: #0066FF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #111;
+      padding: 30px 20px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 3.5em;
+      color: var(--amarillo);
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--azul);
+      transition: color 0.4s ease;
+    }
+
+    h2:hover {
+      color: var(--amarillo);
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.7em;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      font-weight: 300;
+      color: #ffffff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    nav a {
+      color: var(--amarillo);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1em;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--azul);
+    }
+
+    section {
+      padding: 60px 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .background-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .card {
+      position: absolute;
+      width: 100px;
+      height: 150px;
+      opacity: 0.9;
+      animation: floatCard 20s infinite;
+    }
+
+    @keyframes floatCard {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0.9;
+      }
+      50% {
+        opacity: 0.9;
+      }
+      100% {
+        transform: translateY(-200px) rotate(360deg);
+        opacity: 0.9;
+      }
+    }
+
+    .contacto form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contacto input, .contacto textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .contacto button {
+      padding: 10px;
+      background-color: var(--amarillo);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-family: 'Poppins', sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .contacto button:hover {
+      background-color: var(--azul);
+      color: #fff;
+    }
+
+    .fotos img {
+      width: 200px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-animation">
+    <img src="img/amarillo.jpg" class="card" style="top: 90%; left: 10%; animation-delay: 0s;">
+    <img src="img/azul.jpg" class="card" style="top: 100%; left: 40%; animation-delay: 5s;">
+    <img src="img/rojo.jpg" class="card" style="top: 95%; left: 70%; animation-delay: 10s;">
+  </div>
+
+  <header>
+    <h1>La Marrana del Color</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#producto">Producto</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#fotos">Fotos</a>
+    </nav>
+  </header>
+
+  <section id="inicio">
+    <h2>¡Agudiza tu ojo creativo jugando!</h2>
+    <p>
+      Descubre <strong>La Marrana del Color</strong>: el juego de mesa que combina diversión con aprendizaje visual. Diseñado especialmente para creativos, te reta a dominar los significados del color y reconocer marcas como todo un profesional.
+    </p>
+  </section>
+
+  <section id="producto">
+    <h2>¿Qué es La Marrana del Color?</h2>
+    <p>
+      Basado en la dinámica de cartas del famoso "UNO", este juego transforma el entretenimiento en una experiencia educativa. Cada carta y color tiene un propósito: entrenar tu cerebro para interpretar, asociar y aplicar el color en el mundo del diseño gráfico. <br><br>
+      Ideal para <strong>estudiantes, diseñadores y creativos visuales</strong> que buscan mejorar su percepción cromática mientras se divierten.
+    </p>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <h2>¿Listo para jugar con propósito?</h2>
+    <p>Contáctanos para adquirir tu juego o colaborar en talleres, ferias o eventos creativos.</p>
+    <form>
+      <input type="text" placeholder="Nombre" required />
+      <input type="email" placeholder="Correo electrónico" required />
+      <textarea placeholder="¿En qué podemos ayudarte?" rows="5" required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <section id="fotos" class="fotos">
+    <h2>Galería de Cartas</h2>
+    <p>Explora algunas cartas de "La Marrana del Color" y prepárate para identificar el poder del color en cada jugada.</p>
+    <div style="text-align: center;">
+      <img src="img/46794256-800-auto.jpg" alt="Carta 1" />
+      <img src="img/40244_737px_q70.jpg" alt="Carta 2" />
+      <img src="img/789431431_235587490_1706x1280.jpg" alt="Carta 3" />
+    </div>
+  </section>
+</body>
+</html>
