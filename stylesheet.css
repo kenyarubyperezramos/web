@@ -1,0 +1,211 @@
+
+    :root {
+      --amarillo: #FFD700;
+      --rojo: #FF2D2D;
+      --azul: #0066FF;
+    }
+
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #000000;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #111111;
+      padding: 30px 20px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 56px;
+      color: var(--amarillo);
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--azul);
+      transition: color 0.4s ease;
+    }
+
+    h2:hover {
+      color: var(--amarillo);
+    }
+
+    p {
+      font-size: 19px;
+      line-height: 28px;
+      max-width: 800px;
+      margin: 0px auto;
+      text-align: center;
+      font-weight: 300;
+      color: #ffffff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    nav a {
+      color: var(--amarillo);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--azul);
+    }
+
+    section {
+      padding: 60px 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .background-animation {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .card {
+      position: absolute;
+      width: 100px;
+      height: 150px;
+      opacity: 0.1;
+      animation: floatCard 20s infinite;
+    }
+
+    @keyframes floatCard {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0.1;
+      }
+      50% {
+        opacity: 0.2;
+      }
+      100% {
+        transform: translateY(-200px) rotate(360deg);
+        opacity: 0.1;
+      }
+    }
+
+    .contacto form {
+      max-width: 500px;
+      margin: 0px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contacto input,
+    .contacto textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+    }
+
+    .contacto button {
+      padding: 10px;
+      background-color: var(--amarillo);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .contacto button:hover {
+      background-color: var(--azul);
+      color: #ffffff;
+    }
+
+    .fotos img {
+      width: 200px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+
+    .fotos div {
+      text-align: center;
+    }
+    h1 span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+h1 span:hover {
+  transform: scale(1.2);
+}
+
+.rojo { color: var(--rojo); }
+.azul { color: var(--azul); }
+.amarillo { color: var(--amarillo); }
+
+
+
+#slideshow {
+    width: 100%;
+
+    margin-top: 40px;
+  }
+  
+  .slide-wrapper {
+    width: 500%;
+    animation: slide 10s infinite;
+    display: flex;
+  }
+  
+  .slide {
+    flex: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+  }
+  
+  .slide img {
+    max-height: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  @keyframes slide {
+    0%    { margin-left: 0; }
+    20%   { margin-left: 0; }
+    25%   { margin-left: -100%; }
+    45%   { margin-left: -100%; }
+    50%   { margin-left: -200%; }
+    70%   { margin-left: -200%; }
+    75%   { margin-left: -300%; }
+    95%   { margin-left: -300%; }
+    100%  { margin-left: -400%; }
+  }
