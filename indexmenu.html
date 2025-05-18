@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Brownies</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+            background: radial-gradient(ellipse farthest-corner at center center, #ffffff 30%, #ffd1af 60%);
+}
+      
+        
+        
+        
+        .menu-wrapper {
+            display: flex;
+            height: calc(100vh - 150px);
+        }
+        
+        .brownie-buttons-container {
+            width:280px;
+  background: transparent;
+            padding: 20px;
+            border-radius: 10px 0 0 10px;
+            overflow-y: auto;
+        }
+        
+        .brownie-options {
+            display: none;
+        }
+        
+        .brownie-label {
+            display: block;
+            padding: 10px;
+            margin: 30px 0;
+            background-color: #4a2c12;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-size: 18px;
+            width: 240px;
+        }
+        
+        .brownie-label:hover {
+            background-color: #3a220d;
+            transform: scale(1.02);
+        }
+        
+        .brownie-options:checked + .brownie-buttons-container .brownie-label[for="tradicional"],
+        .brownie-options:checked + .brownie-buttons-container .brownie-label[for="blanco"],
+        .brownie-options:checked + .brownie-buttons-container .brownie-label[for="caramelo"],
+        .brownie-options:checked + .brownie-buttons-container .brownie-label[for="oreo"],
+        .brownie-options:checked + .brownie-buttons-container .brownie-label[for="menta"],
+        .brownie-options:checked + .brownie-buttons-container .brownie-label[for="nutella"],
+        .brownie-options:checked + .brownie-buttons-container .brownie-label[for="almendra"] {
+            background-color: #2a1807;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        
+        .display-panel {
+            width:1150px ;
+            background: radial-gradient(ellipse farthest-corner at center center, #ffffff 30%, #ffd1af 60%);
+  
+
+            border-radius: 10px;
+            overflow-y: auto;
+            position: relative;
+            height: 650px;
+        }
+        
+        .default-message {
+            text-align: center;
+            color: #666;
+            padding: 50px;
+            font-size: 18px;
+        }
+        
+        .brownie-display {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+            margin-right: 200px;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .brownie-display img {
+            max-width: 500px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          
+        }
+        
+        .brownie-display h3 {
+            color: #4a2c12;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .brownie-display p {
+            color: #333;
+            line-height: 1.6;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Mostrar el brownie seleccionado */
+        #tradicional:checked ~ .display-panel #display-tradicional,
+        #blanco:checked ~ .display-panel #display-blanco,
+        #caramelo:checked ~ .display-panel #display-caramelo,
+        #oreo:checked ~ .display-panel #display-oreo,
+        #menta:checked ~ .display-panel #display-menta,
+        #nutella:checked ~ .display-panel #display-nutella,
+        #almendra:checked ~ .display-panel #display-almendra {
+            display: block;
+        }
+        
+        /* Ocultar mensaje por defecto cuando se selecciona un brownie */
+        #tradicional:checked ~ .display-panel .default-message,
+        #blanco:checked ~ .display-panel .default-message,
+        #caramelo:checked ~ .display-panel .default-message,
+        #oreo:checked ~ .display-panel .default-message,
+        #menta:checked ~ .display-panel .default-message,
+        #nutella:checked ~ .display-panel .default-message,
+        #almendra:checked ~ .display-panel .default-message {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+  <!-- Menú lateral de navegación -->
+  <div class="sidebar">
+    <button onclick="window.location.href='indexfinal.html'" style="font-family:'Royal'; font-size: 30px;>
+      <i class="fas fa-home"></i> Inicio
+    </button>
+    <button onclick="window.location.href='indexmenu.html'" style="font-family:'Royal'; font-size: 30px;>
+      <i class="fas fa-utensils"></i> Ver Menú
+    </button>
+    <button onclick="window.location.href='indexcontacto.html'" style="font-family:'Royal'; font-size: 30px;>
+      <i class="fas fa-envelope"></i> Contáctanos
+    </button>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="main-content">
+    <h2 style="font-family: 'Royal'; font-size: 40px; text-align: center;">Nuestro Menú de Brownies</h2>
+    
+    <div class="menu-wrapper">
+      <!-- Inputs radio ocultos (deben estar primero) -->
+      <input type="radio" name="brownie" id="tradicional" class="brownie-options" checked>
+      <input type="radio" name="brownie" id="blanco" class="brownie-options">
+      <input type="radio" name="brownie" id="caramelo" class="brownie-options">
+      <input type="radio" name="brownie" id="oreo" class="brownie-options">
+      <input type="radio" name="brownie" id="menta" class="brownie-options">
+      <input type="radio" name="brownie" id="nutella" class="brownie-options">
+      <input type="radio" name="brownie" id="almendra" class="brownie-options">
+      
+      <!-- Contenedor de botones -->
+      <div class="brownie-buttons-container">
+        <label for="tradicional" class="brownie-label">
+          <i class="fas fa-cookie"></i> Brownie Tradicional
+        </label>
+        <label for="blanco" class="brownie-label">
+          <i class="fas fa-candy-cane"></i> Brownie con Chocolate blanco
+        </label>
+        <label for="caramelo" class="brownie-label">
+          <i class="fas fa-stroopwafel"></i> Brownie con Caramelo
+        </label>
+        <label for="oreo" class="brownie-label">
+          <i class="fas fa-cookie-bite"></i> Brownie con Oreo
+        </label>
+        <label for="menta" class="brownie-label">
+          <i class="fas fa-leaf"></i> Brownie con Menta
+        </label>
+        <label for="nutella" class="brownie-label">
+          <i class="fas fa-jar"></i> Brownie con Nutella
+        </label>
+        <label for="almendra" class="brownie-label">
+          <i class="fas fa-seedling"></i> Brownie con Almendra
+        </label>
+      </div>
+      
+      <!-- Panel de visualización -->
+      <div class="display-panel">
+        <div class="default-message">
+          <i class="fas fa-arrow-left" style="font-size: 24px; margin-bottom: 15px;"></i>
+          <p>Selecciona un brownie del menú para ver sus detalles</p>
+        </div>
+        
+        <!-- Brownie Tradicional -->
+        <div id="display-tradicional" class="brownie-display">
+          <img src="img/tradicional.jpg" alt="Brownie Tradicional">
+          <h3 style="font-family: 'Royal';  text-align: center;" >Brownie Tradicional</h3>
+          <p>Nuestro clásico brownie con una textura perfecta: crujiente por fuera y suave por dentro.</p>
+          <p class="price">$120.00</p>
+        </div>
+        
+        <!-- Brownie de Chocolate Blanco -->
+        <div id="display-blanco" class="brownie-display">
+          <img src="img/whitec.jpg" alt="Brownie de Chocolate Blanco">
+          <h3 style="font-family: 'Royal';  text-align: center;" >Brownie con Chocolate Blanco</h3>
+          <p>Una deliciosa variante con chocolate blanco premium.</p>
+          <p class="price">$130.00</p>
+        </div>
+        
+        <!-- Brownie con Caramelo -->
+        <div id="display-caramelo" class="brownie-display">
+          <img src="img/caramel.jpg" alt="Brownie con Caramelo">
+          <h3 style="font-family: 'Royal';  text-align: center;">Brownie con Caramelo</h3>
+          <p>Con un corazón de caramelo fundido que se derrite en tu boca.</p>
+          <p class="price">$140.00</p>
+        </div>
+        
+        <!-- Brownie de Oreo -->
+        <div id="display-oreo" class="brownie-display">
+          <img src="img/oreo.jpg" alt="Brownie de Oreo">
+          <h3 style="font-family: 'Royal';  text-align: center;">Brownie con Oreo</h3>
+          <p>La irresistible combinación con trozos de galleta Oreo.</p>
+          <p class="price">$135.00</p>
+        </div>
+        
+        <!-- Brownie de Menta -->
+        <div id="display-menta" class="brownie-display">
+          <img src="img/mint.jpg" alt="Brownie de Menta">
+          <h3 style="font-family: 'Royal';  text-align: center;">Brownie con Menta</h3>
+          <p>Con un refrescante toque de menta que combina perfectamente.</p>
+          <p class="price">$125.00</p>
+        </div>
+        
+        <!-- Brownie de Nutella -->
+        <div id="display-nutella" class="brownie-display">
+          <img src="img/nutella.jpg" alt="Brownie de Nutella">
+          <h3 style="font-family: 'Royal';  text-align: center;">Brownie con Nutella</h3>
+          <p>Con un corazón de Nutella fundida que crea una experiencia única.</p>
+          <p class="price">$150.00</p>
+        </div>
+        
+        <!-- Brownie de Almendra -->
+        <div id="display-almendra" class="brownie-display">
+          <img src="img/almendra.jpg" alt="Brownie de Almendra">
+          <h3 style="font-family: 'Royal';  text-align: center;">Brownie con Almendra</h3>
+          <p>Con almendras tostadas que le dan un crujido especial.</p>
+          <p class="price">$140.00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
