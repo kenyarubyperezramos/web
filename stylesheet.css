@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
+#menu {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    height: 40px;
+    text-align: center;
+    padding-top: auto;
+    background: #012a63;
+
+
+
+
+}
+
+a {
+    font-family: "Lato", sans-serif;
+    font-size: 25px;
+    padding: 30px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+h1 {
+    color: #d8eefe;
+    background-color: #d8eefe;
+    font-size: 70px;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    background: #012a63;
+    background: repeating-radial-gradient(circle farthest-corner at center center, #012a63 0%, #5393d6 20%);
+    background: -webkit-repeating-radial-gradient(circle farthest-corner at center center, #012a63 0%, #5393d6 20%);
+    background: -moz-repeating-radial-gradient(circle farthest-corner at center center, #012a63 0%, #5393d6 20%);
+
+}
+
+
+h2 {
+    color: #1f78c1;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+h3 {
+    color: #103b7f;
+    font-size: 30px;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+    border-radius: 15px;
+}
+
+h6 {
+    color: #1f78c1;
+    font-size: 20px;
+    font-family: "Playfair Display", serif;
+}
+
+#img1 {
+    width: 400px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.notas {
+    max-width: fit-content;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    flex: 1;
+}
+
+.local {
+    width: 400px;
+    height: 400px;
+    float: left;
+    margin: 30px;
+    margin-left: 100px;
+    box-shadow: -8px 27px 20px -2px rgba(1, 42, 99, 0.75);
+    -webkit-box-shadow: -8px 27px 20px -2px rgba(1, 42, 99, 0.75);
+    -moz-box-shadow: -8px 27px 20px -2px rgba(1, 42, 99, 0.75);
+}
+.internet {
+    width: 400px;
+    height: 400px;
+    float: right;
+    margin: 30px;
+    margin-right: 100px;
+    box-shadow: -8px 27px 20px -2px rgba(1, 42, 99, 0.75);
+    -webkit-box-shadow: -8px 27px 20px -2px rgba(1, 42, 99, 0.75);
+    -moz-box-shadow: -8px 27px 20px -2px rgba(1, 42, 99, 0.75);
+}
+
+#Nig {
+    width: 1500px;
+    height: 300px;
+    border-radius: 15px;
+}
+
+.Web {
+    width: 620px;
+    height: 550px;
+    background-color: #5393d644;
+    margin: 20px;
+    margin-top: 80px;
+    float: left;
+    text-align: center;
+    align-content: center;
+    font-family: "Lato", sans-serif;
+    font-size: 23px;
+    align-content: center;
+    border-radius: 10px;
+    border: 27px inset #5393d6;
+    background: #d8eefe;
+}
+
+iframe {
+    border-radius: 15px;
+}
+
+.Izquierda {
+    max-width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    font-family: "Lato", sans-serif;
+    border-radius: 15px;
+}
+
+.Derecha {
+    width: 100%;
+    height: 300px;
+    background-color: #5393d644;
+    margin: 0px;
+    float: right;
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.Izquierda1 {
+    width: 670px;
+    height: 500px;
+    background-color: #5393d6a2;
+    margin: 30px;
+    float: left;
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.Derecha1 {
+    width: 670px;
+    height: 500px;
+    font-family: "Lato", sans-serif;
+    background-color: #5393d6a2;
+    margin: 30px;
+    float: right;
+    text-align: center;
+    border-radius: 15px;
+}
+
+li {
+    font-family: "Lato", sans-serif;
+    color: #ffffff;
+    font-size: 15px;
+    text-align: center;
+    list-style: none;
+}
+
+ol {
+    font-family: "Lato", sans-serif;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+body {
+    background-color: #5393d69d;
+    font-family: "Lato", sans-serif;
+    height: 100%;
+
+
+}
+
+ul {
+    text-align: center;
+}
+
+.corazon {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 30px;
+}
+
+   .anim {
+    height: 10px;
+    width: 100%;
+    background-color: #5393d6;
+    animation: mover 2s infinite; /*Nombre de la animación, tiempo, cuantas veces quieres que lo haga*/
+    }
+    @keyframes mover {
+        0%{
+            transform: translateX(0);
+        }
+        50%{
+            transform: translateX(50px)
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
+.mover{ background-color: #012a63;
+    padding: 10px;  
+    margin: 15px;
+    }
+    .cuadros{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 700px;
+    }
+
+    .boton{
+        background-color: #1f78c1;
+        color: #ffffff;
+        padding: 10px;
+        transition: background-color 0.3s;
+        display: block;
+        margin: 20px;
+    }
+    .boton:hover{
+        background-color: #5393d6;
+    }
+.caja { 
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+}
+
+        .caja img {
+    width: 100px;
+    height: auto;
+}
+
+.hex {
+            background-color: #3592d0;
+            color: white;
+        }
+ 
+        .keyword {
+            background-color: rgb(23, 158, 211);
+            color: black;
+        }
+ 
+        .rgb {
+            /*Define los niveles de Rojo, Verde y Azul*/
+            background-color: rgb(46, 93, 204);
+            color: white;
+        }
+ 
+        .rgba {
+            background-color: rgba(60, 71, 231, 0.662);
+            color: white;
+        }
+ 
+        .hsl {
+            /*Se basa en el círculo cromatico
+        h = Hue (tono, 0–360°, como un ángulo en el círculo de color)
+        s = Saturation (saturación, 0%–100%)
+        l = Lightness (luminosidad, 0%–100%)
+        */
+            background-color: hsl(200, 64%, 51%);
+            color: white;
+        }
+ 
+        .hsla {
+            background-color: hsla(199, 100%, 50%, 0.604);
+            color: white;
+        }
+ 
+        div {
+            padding: 10px;
+            margin: 5px;
+            font-family: sans-serif;
+        }
+ 
+        .parallax {
+            /* The image used */
+            background-image: url("https://www.gifsanimados.org/data/media/1513/mar-y-oceano-imagen-animada-0004.gif");
+ 
+            /* Set a specific height */
+            height: 700px;
+ 
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
